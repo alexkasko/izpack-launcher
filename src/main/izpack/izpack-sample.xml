@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<installation version="1.0">
+    <info>
+        <appname>Sample App</appname>
+        <appversion>1.0</appversion>
+        <uninstaller path="$INSTALL_PATH/uninstall" name="uninstall.jar"/>
+        <!-- http://izpack.org/documentation/installation-files.html#built-in-conditions -->
+        <!--<run-privileged condition="izpack.windowsinstall.vista|izpack.macinstall"/>-->
+    </info>
+
+    <guiprefs width="640" height="480" resizable="no">
+        <laf name="looks">
+            <os family="unix"/>
+        </laf>
+        <laf name="looks">
+            <os family="windows"/>
+        </laf>
+        <modifier key="useHeadingPanel" value="yes"/>
+        <modifier key="useHeadingForSummary" value="yes"/>
+        <modifier key="headingLineCount" value="2"/>
+        <modifier key="headingFontSize" value="1.5"/>
+        <modifier key="headingBackgroundColor" value="0x00ffffff"/>
+        <modifier key="headingPanelCounter" value="text"/>
+        <modifier key="headingPanelCounterPos" value="inHeading"/>
+    </guiprefs>
+
+    <locale>
+        <langpack iso3="eng"/>
+    </locale>
+
+    <panels>
+        <panel classname="HelloPanel"/>
+        <panel classname="LicencePanel"/>
+        <panel classname="TargetPanel"/>
+        <panel classname="PacksPanel"/>
+        <panel classname="InstallPanel"/>
+        <panel classname="SimpleFinishPanel"/>
+    </panels>
+
+    <resources>
+        <res id="TargetPanel.dir.windows" src="default-install-dir.txt"/>
+        <res id="LicencePanel.licence" src="license.txt"/>
+    </resources>
+
+    <packs>
+        <pack name="MyApplication" required="yes" installGroups="appfiles_pack">
+            <description>My Application Description</description>
+            <fileset dir="lib" targetdir="$INSTALL_PATH"/>
+            <fileset dir="uninstall" targetdir="$INSTALL_PATH/uninstall"/>
+        </pack>
+    </packs>
+</installation>
