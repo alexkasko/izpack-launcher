@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.alexkasko.izpack</groupId>
-    <artifactId>izpack-installer-builder</artifactId>
+    <artifactId>izpack-launcher</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.main.class>com.alexkasko.izpack.builder.InstallerBuilder</project.main.class>
+        <project.main.class>com.alexkasko.izpack.builder.Launcher</project.main.class>
     </properties>
 
     <dependencies>
@@ -23,11 +23,6 @@
             <groupId>commons-cli</groupId>
             <artifactId>commons-cli</artifactId>
             <version>1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.1</version>
         </dependency>
     </dependencies>
     <build>

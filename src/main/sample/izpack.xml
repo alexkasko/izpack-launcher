@@ -30,6 +30,7 @@
 
     <panels>
         <panel classname="HelloPanel"/>
+        <panel classname="HTMLInfoPanel" id="greetings" />
         <panel classname="HTMLLicencePanel"/>
         <panel classname="TargetPanel"/>
         <panel classname="PacksPanel"/>
@@ -38,14 +39,19 @@
     </panels>
 
     <resources>
-        <res id="TargetPanel.dir.windows" src="default-install-dir.txt"/>
+        <res id="customicons.xml" src="customicons.xml"/>
+        <res id="JFrameIcon.png" src="icon-sample.png"/>
+        <res id="HTMLInfoPanel.greetings" src="greetings.txt"/>
         <res id="HTMLLicencePanel.licence" src="license.txt"/>
+        <res id="TargetPanel.dir.windows" src="default-install-dir-win.txt"/>
+        <res id="TargetPanel.dir.macosx" src="default-install-dir-mac.txt"/>
+        <res id="TargetPanel.dir.unix" src="default-install-dir-linux.txt"/>
     </resources>
 
     <packs>
         <pack name="MyApplication" required="yes" installGroups="appfiles_pack">
             <description>My Application Description</description>
-            <fileset dir="lib" targetdir="$INSTALL_PATH"/>
+            <fileset dir="myapp" targetdir="$INSTALL_PATH"/>
             <fileset dir="uninstall" targetdir="$INSTALL_PATH/uninstall"/>
         </pack>
     </packs>

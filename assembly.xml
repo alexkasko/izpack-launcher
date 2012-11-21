@@ -6,14 +6,14 @@
     <includeBaseDirectory>false</includeBaseDirectory>
     <fileSets>
         <fileSet>
-            <directory>src/main/izpack/</directory>
-            <outputDirectory>/izpack/</outputDirectory>
+            <directory>src/main/sample/</directory>
+            <outputDirectory>/sample/</outputDirectory>
         </fileSet>
     </fileSets>
     <dependencySets>
         <dependencySet>
             <outputDirectory>/</outputDirectory>
-            <outputFileNameMapping>izpack-builder.jar</outputFileNameMapping>
+            <outputFileNameMapping>izpack-launcher.jar</outputFileNameMapping>
             <unpack>false</unpack>
             <useProjectArtifact>true</useProjectArtifact>
             <useStrictFiltering>true</useStrictFiltering>
