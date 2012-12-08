@@ -1,7 +1,7 @@
 Wrapper for IzPack installer launcher
 =====================================
 
-Thin command-line wrapper over [IzPack]()(http://izpack.org/) `CompilerConfig` class using
+Thin command-line wrapper over [IzPack](http://izpack.org/) `CompilerConfig` class using
 [commons-cli](http://commons.apache.org/cli/).
 
 To build installer, run:
