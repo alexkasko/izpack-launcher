@@ -13,6 +13,11 @@
         <project.main.class>com.alexkasko.izpack.builder.Launcher</project.main.class>
     </properties>
 
+    <scm>
+        <connection>scm:git:foo</connection>
+        <tag>HEAD</tag>
+    </scm>
+
     <dependencies>
         <dependency>
             <groupId>org.codehaus.izpack</groupId>
@@ -93,6 +98,16 @@
                         <phase>prepare-package</phase>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <pushChanges>false</pushChanges>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                    <localCheckout>true</localCheckout>
+                </configuration>
             </plugin>
         </plugins>
     </build>

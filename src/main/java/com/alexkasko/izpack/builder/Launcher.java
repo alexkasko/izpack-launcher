@@ -51,6 +51,10 @@ public class Launcher {
         File izpackXml = new File(input, "izpack.xml");
         if(!(izpackXml.exists() && izpackXml.isFile())) throw new IOException(
                 "'izpack.xml' file not found in input directory: '" + input.getAbsolutePath() + "'");
+        output.mkdirs();
+        if(!output.exists()) throw new IOException(
+                        "Cannot create directory for output file: '" + output.getAbsolutePath() + "'");
+        output.delete();
         // run compiler
         System.out.println("Starting IzPack ...");
         CompilerConfig compilerConfig = new CompilerConfig(izpackXml.getAbsolutePath(), input.getAbsolutePath(),
