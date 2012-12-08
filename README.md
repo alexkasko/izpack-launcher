@@ -1,5 +1,5 @@
-Wrapper for IzPack installer launcher
-=====================================
+Wrapper for IzPack installer creator
+====================================
 
 Thin command-line wrapper over [IzPack](http://izpack.org/) `CompilerConfig` class using
 [commons-cli](http://commons.apache.org/cli/).
